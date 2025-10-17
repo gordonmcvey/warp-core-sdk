@@ -1,0 +1,44 @@
+{
+  "name": "vendor_name/warp-core-sdk",
+  "type": "library",
+  "description": "Software Development Kit for Warp Core microframework",
+  "minimum-stability": "stable",
+  "homepage": "https://github.com/gordonmcvey/warp-core-sdk",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "gordonmcvey"
+    }
+  ],
+  "require": {
+    "php": ">=8.3.0",
+    "ext-json": "*",
+    "gordonmcvey/httpsupport": "^2.0"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.11.3",
+    "phpstan/phpstan": "^2.1.6",
+    "overtrue/phplint": "^9.5.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "gordonmcvey\\WarpCore\\sdk\\": "src/"
+    }
+  },
+  "repositories": [
+    {
+      "type": "github",
+      "url": "git@github.com:gordonmcvey/httpsupport.git"
+    }
+  ],
+  "scripts": {
+    "phpcs": "vendor/bin/phpcs",
+    "lint": "vendor/bin/phplint -c ./phplint.yaml.dist",
+    "static": "vendor/bin/phpstan",
+    "all": [
+      "@phpcs",
+      "@lint",
+      "@static"
+    ]
+  }
+}
