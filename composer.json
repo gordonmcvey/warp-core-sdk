@@ -1,5 +1,5 @@
 {
-  "name": "vendor_name/warp-core-sdk",
+  "name": "gordonmcvey/warp-core-sdk",
   "type": "library",
   "description": "Software Development Kit for Warp Core microframework",
   "minimum-stability": "stable",
