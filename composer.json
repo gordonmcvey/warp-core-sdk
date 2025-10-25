@@ -10,10 +10,21 @@
       "name": "gordonmcvey"
     }
   ],
+  "keywords": [
+    "json",
+    "http",
+    "restful",
+    "api",
+    "microservice",
+    "framrwork",
+    "microframework",
+    "php",
+    "sdk"
+  ],
   "require": {
     "php": ">=8.3.0",
     "ext-json": "*",
-    "gordonmcvey/httpsupport": "^2.0"
+    "gordonmcvey/httpsupport": "^2.0.2"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.11.3",
