@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Copyright © 2025 Gordon McVey
+ * Copyright © 2026 Gordon McVey
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,26 +18,16 @@
 
 declare(strict_types=1);
 
-namespace gordonmcvey\WarpCore\sdk\interface\routing;
+namespace gordonmcvey\WarpCore\sdk\dto\routing;
 
-use gordonmcvey\httpsupport\enum\Verbs;
-use gordonmcvey\WarpCore\sdk\dto\routing\Route;
-
-/**
- * Routing strategy interface
- *
- * Strategies for the Router must implement this interface.
- */
-interface RoutingStrategyInterface
+final readonly class Route
 {
     /**
-     * Determine the request handler to use for the given request.  It should return null if an appropriate request
-     * handler cannot be found
+     * @param array<array-key, scalar> $pathParams
      */
-    public function route(string $path): ?Route;
-
-    /**
-     * @return array<Verbs>
-     */
-    public function forVerbs(): array;
+    public function __construct(
+        public string $controllerClass,
+        public array $pathParams = [],
+    ) {
+    }
 }
