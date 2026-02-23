@@ -21,6 +21,7 @@ declare(strict_types=1);
 namespace gordonmcvey\WarpCore\sdk\interface\routing;
 
 use gordonmcvey\httpsupport\interface\request\RequestInterface;
+use gordonmcvey\WarpCore\sdk\dto\routing\Route;
 
 /**
  * Interface for Router implementations
@@ -30,5 +31,5 @@ use gordonmcvey\httpsupport\interface\request\RequestInterface;
  */
 interface RouterInterface
 {
-    public function route(RequestInterface $request): string;
+    public function route(RequestInterface $request): Route;
 }
